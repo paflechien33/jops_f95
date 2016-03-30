@@ -13,13 +13,13 @@ program TEST
     end do
     write (*,'(A3)',advance='no') '2.7'
     !calc
-    do n=18499,9,-1
+    do n=18499,8,-1
       do i=n+1,2,-1
         k(i) = mod(m,i)
         m = 10*k((i-1)) + m/i
       end do
       if(n<18499) then
-      write (*,zzformat,advance='no') modulo(m,10)
+        write (*,zzformat,advance='no') m
       end if
     end do
     stop
